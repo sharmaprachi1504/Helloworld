@@ -18,7 +18,7 @@ pipeline {
     stage('Build') {
       steps {
         bat 'dotnet tool install --global dotnet-sonarscanner'
-        bat 'dotnet sonarscanner begin /k:"narendrakumar02_BenchFreshersTrainingAssignment" /d:sonar.token="ca8f7549be785d7880c59ce1ae6d4f0714b57abe"'
+        bat 'dotnet sonarscanner begin /k:"narendrakumar02_BenchFreshersTrainingAssignment" /d:sonar.token="ca8f7549be785d7880c59ce1ae6d4f0714b57abe" /d:sonar.host.url="https://sonarcloud.io"'
         bat 'dotnet build dotnet-core-helloWorld.csproj'
         bat 'dotnet sonarscanner end /d:sonar.token="ca8f7549be785d7880c59ce1ae6d4f0714b57abe"'
         
