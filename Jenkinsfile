@@ -3,9 +3,15 @@ pipeline {
  
   stages {
     
+    
     stage('Restore') {
       steps {
         bat 'dotnet restore'
+      }
+    }
+    stage('Clean') {
+      steps {
+        bat 'dotnet clean'
       }
     }
 
