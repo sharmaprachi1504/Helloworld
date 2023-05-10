@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:1.0
+FROM mcr.microsoft.com/dotnet/aspnet
 WORKDIR /app
 COPY bin/Debug/netcoreapp1.0/ .
 ENTRYPOINT ["dotnet","dotnet-core-helloWorld.dll"]
