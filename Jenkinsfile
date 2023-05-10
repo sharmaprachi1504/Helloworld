@@ -6,12 +6,12 @@ pipeline {
     
     stage('Restore') {
       steps {
-        bat 'dotnet restore'
+        bat 'dotnet restore dotnet-core-helloWorld.csproj'
       }
     }
     stage('Clean') {
       steps {
-        bat 'dotnet clean'
+        bat 'dotnet clean dotnet-core-helloWorld.csproj'
       }
     }
 
